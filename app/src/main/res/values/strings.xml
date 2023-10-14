@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">UTS 1 P3B</string>
+    <array name="stasiun">
+        <item>Pilih</item>
+        <item>Yogyakarta, Tugu</item>
+        <item>Yogyakarta, Lempuyangan</item>
+        <item>Yogyakarta, Maguwo</item>
+        <item>Yogyakarta, Wates</item>
+        <item>Yogyakarta, Kutoarjo</item>
+        <item>Jakarta, Senayan</item>
+        <item>Jakarta, Gambir</item>
+        <item>Jakarta, Jatinegara</item>
+        <item>Jakarta, Pasar Senen</item>
+        <item>Surabaya, Pasar Turi</item>
+        <item>Surabaya, Gubeng</item>
+        <item>Bandung, Kiaracondong</item>
+        <item>Bandung, Hall</item>
+        <item>Malang, Malang</item>
+        <item>Malang, Blimbing</item>
+        <item>Semarang, Poncol</item>
+        <item>Semarang, Tawang</item>
+        <item>Mojokerto, Mojokerto</item>
+        <item>Mojokerto, Jombang</item>
+        <item>Kediri, Kertosono</item>
+        <item>Solo, Balapan</item>
+        <item>Solo, Purwosari</item>
+        <item>Solo, Solojebres</item>
+    </array>
+
+    <array name="kelas">
+        <item>Pilih</item>
+        <item>Eksekutif</item>
+        <item>Bisnis</item>
+        <item>Ekonomi</item>
+    </array>
+</resources>

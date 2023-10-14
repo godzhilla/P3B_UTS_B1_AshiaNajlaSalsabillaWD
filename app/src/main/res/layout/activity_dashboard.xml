@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TRainPeLoka"
+        android:padding="20dp"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/container_header"
+        android:textColor="@color/white"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_header"
+        android:id="@+id/content_dashboard"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/viewPager2"
+                android:src="@drawable/image_1"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_sub_judul"
+                android:layout_below="@id/viewPager2"
+                android:textSize="24sp"
+                android:text="Rencana Perjalanan"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_plus"
+                android:layout_below="@id/txt_sub_judul"
+                android:id="@+id/ic_plus"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_rencana_perjalanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah Perjalanan"
+                android:layout_below="@id/viewPager2"
+                android:layout_toRightOf="@id/ic_plus"
+                android:layout_alignTop="@id/ic_plus"
+                android:layout_alignBottom="@id/ic_plus"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search"
+                android:layout_below="@id/ic_plus"
+                android:id="@+id/ic_search"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_cari_riwayat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cari Riwayat"
+                android:layout_below="@id/txt_rencana_perjalanan"
+                android:layout_toRightOf="@id/ic_search"
+                android:layout_alignTop="@id/ic_search"
+                android:layout_alignBottom="@id/ic_search"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_below="@id/ic_search"
+                android:layout_marginTop="10dp"
+                >
+
+                <CalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:datePickerMode="calendar" />
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
