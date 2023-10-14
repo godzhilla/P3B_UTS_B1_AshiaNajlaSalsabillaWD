@@ -50,7 +50,7 @@ class LoginPage : AppCompatActivity() {
                         launcher.launch(intentToDashboard)
                     }
                     else {
-                        Toast.makeText(this@LoginPage, "Password salah", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@LoginPage, "Password Salah", Toast.LENGTH_SHORT).show()
                     }
                 }
                 else {

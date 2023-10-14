@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
 
         with(binding){
             
-            val calendarDatePicker = findViewById<DatePicker>(R.id.calendar_date_picker)
+//            val calendarDatePicker = findViewById<DatePicker>(R.id.calendar_date_picker)
             editTextDob.setOnClickListener{
                 calendarDatePicker.visibility = View.VISIBLE
                 val datePicker = DatePicker()
@@ -90,19 +90,21 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
                         startActivity(intentToLoginPage)
                     }
 
-                    //ini apaan bro??
-                    fun onDataSet(
-                        view: android.widget.DatePicker?,
-                        year: Int,
-                        month: Int,
-                        dayOfMonth:  Int
-                    ) {
-                        //Ubah Edit Text????
-                        val selectedDate = "$dayOfMonth/${month+1}/$year"
-                        binding.editTextDob.setText(selectedDate)
-                    }
+
+
+
                 }
             }
         }
+    }
+
+    override fun onDateSet(
+        view: android.widget.DatePicker?,
+        year: Int,
+        month: Int,
+        dayOfMonth:  Int
+    ) {
+        val selectedDate = "$dayOfMonth/${month+1}/$year"
+        binding.editTextDob.setText(selectedDate)
     }
 }

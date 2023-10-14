@@ -8,8 +8,9 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.example.uts1p3b.databinding.ActivityDashboardBinding
 import com.example.uts1p3b.databinding.ActivityFormBinding
+import android.app.DatePickerDialog
 
-class Form : AppCompatActivity() {
+class Form : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     private lateinit var binding: ActivityFormBinding
 
     private var hargaTiketSementara = 0
@@ -186,5 +187,15 @@ class Form : AppCompatActivity() {
                 startActivity(intentToDashboard)
             }
         }
+    }
+
+    override fun onDateSet(
+        view: android.widget.DatePicker?,
+        year: Int,
+        month: Int,
+        dayOfMonth:  Int
+    ) {
+        val selectedDate = "$dayOfMonth/${month+1}/$year"
+        binding.editTextTanggal.setText(selectedDate)
     }
 }
